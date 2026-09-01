@@ -1,0 +1,72 @@
+{
+  "runningText": "Selamat datang di Masjid & Mushola Al Jabar. Jaga adab masjid, matikan nada dering, dan rapatkan shaf. Semoga Allah menerima amal ibadah kita.",
+  "quotes": [
+    {
+      "text": "Sesungguhnya shalat itu adalah kewajiban yang ditentukan waktunya atas orang-orang yang beriman.",
+      "source": "QS. An-Nisa: 103"
+    },
+    {
+      "text": "Shalatlah kamu sebagaimana kamu melihat aku shalat.",
+      "source": "HR. Bukhari"
+    },
+    {
+      "text": "Sebaik-baik tempat adalah masjid, dan seburuk-buruk tempat adalah pasar.",
+      "source": "HR. Muslim"
+    },
+    {
+      "text": "Barang siapa yang membangun masjid karena Allah, maka Allah akan membangunkan baginya rumah di surga.",
+      "source": "HR. Bukhari & Muslim"
+    },
+    {
+      "text": "Dan dirikanlah shalat, tunaikanlah zakat, dan ruku'lah beserta orang-orang yang ruku'.",
+      "source": "QS. Al-Baqarah: 43"
+    }
+  ],
+  "announcements": [
+    {
+      "title": "Kajian Rutin",
+      "body": "Kajian ba'da Maghrib setiap Ahad. Tema menyesuaikan pengumuman takmir.",
+      "tag": "Kajian"
+    },
+    {
+      "title": "Infaq Jumat",
+      "body": "Infakkan sebagian rezeki melalui kotak amal atau transfer. Laporan keuangan ditampilkan secara berkala.",
+      "tag": "Infaq"
+    },
+    {
+      "title": "Jaga Kebersihan",
+      "body": "Simpan sandal pada rak, buang sampah pada tempatnya, dan bantu merapikan sajadah setelah shalat.",
+      "tag": "Adab"
+    }
+  ],
+  "activities": [
+    {
+      "day": "Setiap hari",
+      "time": "Ba'da Subuh",
+      "title": "Tilawah & dzikir pagi"
+    },
+    {
+      "day": "Jumat",
+      "time": "Ba'da Dzuhur",
+      "title": "Shalat Jumat berjamaah"
+    },
+    {
+      "day": "Ahad",
+      "time": "Ba'da Maghrib",
+      "title": "Kajian rutin"
+    }
+  ],
+  "officers": {
+    "imam": "Takmir Al Jabar",
+    "muadzin": "Petugas harian",
+    "khatib": "Menyesuaikan jadwal Jumat",
+    "bilal": "Petugas Jumat"
+  },
+  "finance": {
+    "period": "Periode berjalan",
+    "inflow": 0,
+    "outflow": 0,
+    "balance": 0,
+    "note": "Isi nominal di panel admin agar tampil di layar."
+  }
+}

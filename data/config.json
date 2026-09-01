@@ -1,0 +1,58 @@
+{
+  "mosque": {
+    "name": "Al Jabar",
+    "type": "Masjid & Mushola",
+    "tagline": "Baldatun thayyibatun wa rabbun ghafur",
+    "address": "Atur alamat di panel admin",
+    "phone": "",
+    "account": ""
+  },
+  "theme": {
+    "id": "aljabar",
+    "cream": "#F4EDE3",
+    "creamDeep": "#E8DCCB",
+    "brown": "#6B4423",
+    "brownDeep": "#3E2614",
+    "sand": "#C4A574",
+    "white": "#FFFcf7"
+  },
+  "prayer": {
+    "method": "kemenag",
+    "asr": "standard",
+    "adjustments": {
+      "imsak": -10,
+      "fajr": 0,
+      "sunrise": 0,
+      "dhuha": 0,
+      "dhuhr": 2,
+      "asr": 0,
+      "maghrib": 2,
+      "isha": 0
+    },
+    "iqamah": {
+      "fajr": 15,
+      "dhuhr": 10,
+      "asr": 10,
+      "maghrib": 5,
+      "isha": 10
+    },
+    "prayerDuration": 15,
+    "adzanLead": 0,
+    "countdownHighlightMinutes": 20
+  },
+  "location": {
+    "useGeo": true,
+    "lat": null,
+    "lng": null,
+    "label": ""
+  },
+  "display": {
+    "rotateSeconds": 18,
+    "quoteSeconds": 22,
+    "showImsak": true,
+    "showSunrise": true,
+    "showDhuha": true,
+    "quietOnPrayer": true,
+    "jumatMode": true
+  }
+}

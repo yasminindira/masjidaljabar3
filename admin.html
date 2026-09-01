@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin Display Al Jabar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/admin.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <h1>Panel admin</h1>
+        <p>Masjid &amp; Mushola Al Jabar — pengaturan tampilan TV.</p>
+      </div>
+      <nav class="nav">
+        <a href="index.html">Lihat layar</a>
+      </nav>
+    </header>
+
+    <section>
+      <h2>Identitas</h2>
+      <div class="grid">
+        <label>Nama masjid / mushola<input id="mosque-name" /></label>
+        <label>Jenis<input id="mosque-type" /></label>
+        <label>Tagline<input id="mosque-tagline" /></label>
+        <label>Alamat<input id="mosque-address" /></label>
+        <label>Rekening / QR info<input id="mosque-account" /></label>
+      </div>
+    </section>
+
+    <section>
+      <h2>Lokasi &amp; jadwal</h2>
+      <div class="grid">
+        <label class="check"><input type="checkbox" id="use-geo" /> Pakai lokasi perangkat otomatis</label>
+        <div class="actions"><button type="button" id="btn-geo">Ambil koordinat sekarang</button></div>
+        <label>Lintang<input id="loc-lat" type="number" step="0.000001" /></label>
+        <label>Bujur<input id="loc-lng" type="number" step="0.000001" /></label>
+        <label>Label lokasi<input id="loc-label" /></label>
+        <label>Metode
+          <select id="prayer-method">
+            <option value="kemenag">Kemenag (20° / 18°)</option>
+            <option value="mwl">Muslim World League</option>
+            <option value="isna">ISNA</option>
+            <option value="egypt">Egypt</option>
+            <option value="makkah">Umm al-Qura</option>
+            <option value="karachi">Karachi</option>
+          </select>
+        </label>
+        <label>Ashar
+          <select id="prayer-asr">
+            <option value="standard">Standar (Syafii)</option>
+            <option value="hanafi">Hanafi</option>
+          </select>
+        </label>
+        <label>Sorot countdown (menit)<input id="highlight-min" type="number" /></label>
+        <label>Durasi mode sholat (menit)<input id="prayer-dur" type="number" /></label>
+      </div>
+      <p class="hint">Jika izin lokasi aktif, jadwal dihitung dari tempat aplikasi dibuka. Isi lintang/bujur sebagai cadangan atau jika geo dimatikan.</p>
+    </section>
+
+    <section>
+      <h2>Iqamah &amp; koreksi menit</h2>
+      <div class="grid">
+        <label>Iqamah Subuh<input id="iq-fajr" type="number" /></label>
+        <label>Iqamah Dzuhur<input id="iq-dhuhr" type="number" /></label>
+        <label>Iqamah Ashar<input id="iq-asr" type="number" /></label>
+        <label>Iqamah Maghrib<input id="iq-maghrib" type="number" /></label>
+        <label>Iqamah Isya<input id="iq-isha" type="number" /></label>
+        <label>Koreksi Subuh<input id="adj-fajr" type="number" /></label>
+        <label>Koreksi Dzuhur<input id="adj-dhuhr" type="number" /></label>
+        <label>Koreksi Ashar<input id="adj-asr" type="number" /></label>
+        <label>Koreksi Maghrib<input id="adj-maghrib" type="number" /></label>
+        <label>Koreksi Isya<input id="adj-isha" type="number" /></label>
+      </div>
+    </section>
+
+    <section>
+      <h2>Tampilan</h2>
+      <div class="grid">
+        <label class="check"><input type="checkbox" id="show-imsak" /> Tampilkan Imsak</label>
+        <label class="check"><input type="checkbox" id="show-sunrise" /> Tampilkan Syuruq</label>
+        <label class="check"><input type="checkbox" id="show-dhuha" /> Tampilkan Dhuha</label>
+        <label>Rotasi panel (detik)<input id="rotate-sec" type="number" /></label>
+      </div>
+    </section>
+
+    <section>
+      <h2>Konten layar</h2>
+      <label>Running text<textarea id="running"></textarea></label>
+      <p class="hint">Ayat / hadits: satu baris satu kutipan, format <code>teks | sumber</code></p>
+      <textarea id="quotes"></textarea>
+      <p class="hint">Pengumuman: <code>judul | isi | tag</code></p>
+      <textarea id="announcements"></textarea>
+      <p class="hint">Kegiatan: <code>hari | waktu | judul</code></p>
+      <textarea id="activities"></textarea>
+    </section>
+
+    <section>
+      <h2>Petugas &amp; kas</h2>
+      <div class="grid">
+        <label>Imam<input id="off-imam" /></label>
+        <label>Muadzin<input id="off-muadzin" /></label>
+        <label>Khatib<input id="off-khatib" /></label>
+        <label>Periode kas<input id="fin-period" /></label>
+        <label>Pemasukan<input id="fin-in" type="number" /></label>
+        <label>Pengeluaran<input id="fin-out" type="number" /></label>
+        <label>Saldo<input id="fin-bal" type="number" /></label>
+        <label>Catatan kas<input id="fin-note" /></label>
+      </div>
+    </section>
+
+    <section>
+      <h2>Simpan</h2>
+      <div class="actions">
+        <button class="primary" type="button" id="btn-save">Simpan di perangkat</button>
+        <button type="button" id="btn-export">Unduh JSON</button>
+        <button type="button" id="btn-reset">Reset ke file bawaan</button>
+      </div>
+      <p class="hint">GitHub Pages bersifat statis. Perubahan admin tersimpan di browser TV/laptop. Untuk jadi default repo, unduh JSON lalu salin isinya ke <code>data/config.json</code> dan <code>data/content.json</code>.</p>
+    </section>
+  </div>
+  <div id="toast"></div>
+  <script src="js/storage.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>
